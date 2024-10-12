@@ -1,9 +1,11 @@
 <?php
 // Connect to the database
-$servername = "localhost"; // Update with your DB details
-$username = "root";
-$password = "";
+$servername = "localhost"; // DB server name
+$username = "root"; // DB username
+$password = ""; // DB password
 $dbname = "fumblemeterdb"; // Database name
+
+$conn = new mysqli($servername, $username, $password, $dbname);
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
@@ -75,7 +77,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Counter Website</title>
+    <title>Fumblemeter</title>
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -151,8 +153,8 @@ $conn->close();
 </body>
 <footer>
     <div class="footer-content">
-        <h>Meme Orgy</h4>
-            <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
+        <h>Meme Orgy</h>
+        <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
     </div>
 </footer>
 

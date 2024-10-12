@@ -1,10 +1,11 @@
 /* Base Styles */
-html, body {
+html,
+body {
   height: 100%; /* Full height for body and html */
 }
 
 body {
-  font-family: 'Comic Sans MS', cursive, sans-serif;
+  font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
   background-color: #121212; /* Dark background */
   margin: 0;
@@ -13,7 +14,8 @@ body {
   flex-direction: column; /* Stack children vertically */
 }
 
-h1, h2 {
+h1,
+h2 {
   color: #e0e0e0; /* Light gray text color */
 }
 
@@ -89,14 +91,15 @@ tr:hover {
 }
 
 /* Button Styles */
-button, #removebtn {
+button,
+#removebtn {
   padding: 10px 20px;
   font-size: 15px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
   transition: background-color 0.3s; /* Smooth transition for hover effect */
-  font-family: 'Comic Sans MS', cursive, sans-serif; /* Set font to Comic Sans */
+  font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 button {
@@ -111,7 +114,6 @@ button:hover {
 #removebtn {
   background-color: #be3233; /* Red color for the remove button */
 }
-
 
 /* Form Styles */
 form {
@@ -155,57 +157,64 @@ footer {
   margin: 0 auto; /* Center the div horizontally */
   border-radius: 5px;
   background-color: #1f1f1f;
+  margin-bottom: 20px;
 }
 
 /* Responsive Design - Adjustments for Small Screens (Tablets, Mobiles) */
 @media (max-width: 768px) {
   body {
-      font-size: 16px; /* Adjust font size for readability */
+    font-size: 16px; /* Adjust font size for readability */
   }
 
   table {
-      width: 90%; /* Increase width on smaller screens but not full */
+    width: 90%; /* Increase width on smaller screens but not full */
   }
 
   nav ul {
-      flex-direction: column; /* Stack navigation items vertically */
-      text-align: left;
+    flex-direction: column; /* Stack navigation items vertically */
+    text-align: left;
   }
 
   nav ul li {
-      margin: 10px 0;
+    margin: 10px 0;
   }
 
   /* Adjust button sizes and paddings for smaller screens */
-  button, #removebtn {
-      padding: 8px 12px;
-      font-size: 14px;
+  button,
+  #removebtn {
+    padding: 8px 12px;
+    font-size: 14px;
   }
 
   /* Responsive table: Adjust cells for small screens */
-  td, th {
-      font-size: 14px; /* Smaller font size in the table */
-      padding: 8px;
+  td,
+  th {
+    font-size: 14px; /* Smaller font size in the table */
+    padding: 8px;
   }
 }
 
 /* Styles for Even Smaller Devices (Smartphones) */
 @media (max-width: 480px) {
-  h1, h2 {
-      font-size: 18px; /* Smaller headings */
+  h1,
+  h2 {
+    font-size: 18px; /* Smaller headings */
   }
 
   input[type="text"] {
-      width: 100%; /* Full-width input field for mobile */
+    width: 100%; /* Full-width input field for mobile */
   }
 
-  button, #removebtn {
-      width: 100%;
-      margin: 5px 0;
+  button,
+  #removebtn {
+    width: 100%;
+    margin: 5px 0;
   }
 
-  table, th, td {
-      font-size: 12px;
-      padding: 6px;
+  table,
+  th,
+  td {
+    font-size: 12px;
+    padding: 6px;
   }
 }
