@@ -1,145 +1,211 @@
 /* Base Styles */
+html, body {
+  height: 100%; /* Full height for body and html */
+}
+
 body {
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    text-align: center;
-    background-color: #121212; /* Dark background */
-    margin: 0;
-    padding: 0;
+  font-family: 'Comic Sans MS', cursive, sans-serif;
+  text-align: center;
+  background-color: #121212; /* Dark background */
+  margin: 0;
+  padding: 0;
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
 }
 
 h1, h2 {
-    color: #e0e0e0; /* Light gray text color */
+  color: #e0e0e0; /* Light gray text color */
 }
 
 /* Header Styles */
 header {
-    background-color: #1e1e1e; /* Slightly lighter dark background for header */
-    padding: 10px 0;
+  background-color: #1e1e1e; /* Slightly lighter dark background for header */
+  padding: 10px 0;
 }
 
 /* Navigation Styles */
 nav {
-    display: flex;
-    justify-content: space-between; /* Space between left and right nav items */
-    align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: space-between; /* Space between left and right nav items */
+  align-items: center; /* Center vertically */
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex; /* Combine left and right nav styles */
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* Combine left and right nav styles */
 }
 
 nav ul li {
-    margin: 0 15px;
+  margin: 0 15px;
 }
 
 nav ul li a {
-    color: #ffffff; /* White text for links */
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s; /* Smooth transition for hover effect */
+  color: #ffffff; /* White text for links */
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {
-    color: #be3233; /* Highlight color on hover */
+  color: #be3233; /* Highlight color on hover */
 }
 
 nav ul li a.active {
-    color: rgb(199, 31, 31); /* Active tab color */
-    border-radius: 5px; /* Rounded corners for the active tab */
+  color: rgb(199, 31, 31); /* Active tab color */
+  border-radius: 5px; /* Rounded corners for the active tab */
 }
 
 /* Table Styles */
 table {
-    width: 70%;
-    margin: 20px auto;
-    border-collapse: separate; /* Change to separate */
-    background-color: #242424; /* Darker background for the table */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    border-radius: 10px; /* Rounded corners */
-    overflow: hidden; /* Ensure the rounded corners are visible */
+  width: 70%; /* Table width for larger screens */
+  margin: 20px auto; /* Center the table */
+  border-collapse: separate; /* Change to separate */
+  background-color: #242424; /* Darker background for the table */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 10px; /* Rounded corners */
+  overflow: hidden; /* Ensure the rounded corners are visible */
 }
 
 th {
-    background-color: #be3233; /* Header background */
-    color: white;
-    padding: 15px;
+  background-color: #be3233; /* Header background */
+  color: white;
+  padding: 15px;
 }
 
 td {
-    padding: 10px;
-    border: 1px solid #444; /* Darker border for the table cells */
-    color: #e0e0e0; /* Light text color for table data */
+  padding: 10px;
+  border: 1px solid #444; /* Darker border for the table cells */
+  color: #e0e0e0; /* Light text color for table data */
 }
 
 tr:nth-child(even) {
-    background-color: #333; /* Darker row for even rows */
+  background-color: #333; /* Darker row for even rows */
 }
 
 tr:hover {
-    background-color: #444; /* Slightly lighter on hover */
+  background-color: #444; /* Slightly lighter on hover */
 }
 
 /* Button Styles */
 button, #removebtn {
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  font-family: 'Comic Sans MS', cursive, sans-serif; /* Set font to Comic Sans */
 }
 
 button {
-    background-color: #666666; /* Dark button color */
-    color: white;
+  background-color: #666666; /* Dark button color */
+  color: white;
 }
 
 button:hover {
-    background-color: #be3233; /* Highlight on hover */
+  background-color: #be3233; /* Highlight on hover */
 }
 
 #removebtn {
-    background-color: #be3233; /* Red color for the remove button */
+  background-color: #be3233; /* Red color for the remove button */
 }
+
 
 /* Form Styles */
 form {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 input[type="text"] {
-    padding: 10px;
-    font-size: 16px;
-    width: 200px;
-    margin-right: 10px;
-    background-color: #333; /* Dark background for input */
-    color: #e0e0e0; /* Light text color for input */
-    border: 1px solid #444; /* Darker border for input */
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #333; /* Dark background for input */
+  color: #e0e0e0; /* Light text color for input */
+  border: 1px solid #444; /* Darker border for input */
 }
 
-.active{
-    color: #be3233;
-}
-
+/* Footer Styles */
 footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 15px 0;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto; /* Push footer to the bottom */
+  width: 100%;
 }
 
 .footer-content h3 {
-    margin: 0;
-    font-size: 24px;
+  margin: 0;
+  font-size: 24px;
 }
 
 .footer-content p {
-    margin: 5px 0 0;
-    font-size: 14px;
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.AddPersonForm {
+  padding: 10px;
+  border: 1px solid #444;
+  width: fit-content;
+  margin: 0 auto; /* Center the div horizontally */
+  border-radius: 5px;
+  background-color: #1f1f1f;
+}
+
+/* Responsive Design - Adjustments for Small Screens (Tablets, Mobiles) */
+@media (max-width: 768px) {
+  body {
+      font-size: 16px; /* Adjust font size for readability */
+  }
+
+  table {
+      width: 90%; /* Increase width on smaller screens but not full */
+  }
+
+  nav ul {
+      flex-direction: column; /* Stack navigation items vertically */
+      text-align: left;
+  }
+
+  nav ul li {
+      margin: 10px 0;
+  }
+
+  /* Adjust button sizes and paddings for smaller screens */
+  button, #removebtn {
+      padding: 8px 12px;
+      font-size: 14px;
+  }
+
+  /* Responsive table: Adjust cells for small screens */
+  td, th {
+      font-size: 14px; /* Smaller font size in the table */
+      padding: 8px;
+  }
+}
+
+/* Styles for Even Smaller Devices (Smartphones) */
+@media (max-width: 480px) {
+  h1, h2 {
+      font-size: 18px; /* Smaller headings */
+  }
+
+  input[type="text"] {
+      width: 100%; /* Full-width input field for mobile */
+  }
+
+  button, #removebtn {
+      width: 100%;
+      margin: 5px 0;
+  }
+
+  table, th, td {
+      font-size: 12px;
+      padding: 6px;
+  }
 }
