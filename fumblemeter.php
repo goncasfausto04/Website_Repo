@@ -1,28 +1,7 @@
 <?php
 
-session_start();
-
-// Check if the user is logged in
-if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
-    // Not logged in, redirect to the login page
-    header("Location: index.html");
-    exit();
-}
-
-// Connect to the database
-$servername = "localhost"; // DB server name
-$username = "root"; // DB username
-$password = ""; // DB password
-$dbname = "fumblemeterdb"; // Database name
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'session.php';
+include 'db_connection.php';
 
 // Get all users and their stats
 $sql = "SELECT name, fumbles, goals_stolen, good_plays FROM counters";
