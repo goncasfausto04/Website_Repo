@@ -18,6 +18,10 @@
             border-radius: 10px;
             color: white;
             text-align: center;
+            width: fit-content;
+            padding: 40px;
+            margin: 0 auto;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         #player-hand,
@@ -73,6 +77,7 @@
         <button id="stand-button">Stand</button>
         <p id="game-message"></p>
     </div>
+
 
     <footer>
         <div class="footer-content">

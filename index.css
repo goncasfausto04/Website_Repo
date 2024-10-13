@@ -12,6 +12,9 @@ body {
   padding: 0;
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack children vertically */
+  background-image: url("bg.jpg"); /* Set your background image */
+  background-size: cover; /* Ensure the image covers the entire background */
+  background-position: center; /* Center the background image */
 }
 
 h1,
@@ -61,13 +64,14 @@ nav ul li a.active {
 
 /* Table Styles */
 table {
-  width: 70%; /* Table width for larger screens */
+  width: fit-content; /* Table width for larger screens */
+  height: fit-content; /* Table height for larger screens */
   margin: 20px auto; /* Center the table */
   border-collapse: separate; /* Change to separate */
   background-color: #242424; /* Darker background for the table */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   border-radius: 10px; /* Rounded corners */
   overflow: hidden; /* Ensure the rounded corners are visible */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 th {
@@ -138,6 +142,7 @@ footer {
   padding: 15px 0;
   margin-top: auto; /* Push footer to the bottom */
   width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 .footer-content h3 {
@@ -149,15 +154,20 @@ footer {
   margin: 5px 0 0;
   font-size: 14px;
 }
-
 .AddPersonForm {
-  padding: 10px;
+  padding: 15px; /* Increase padding for better spacing */
   border: 1px solid #444;
-  width: fit-content;
-  margin: 0 auto; /* Center the div horizontally */
-  border-radius: 5px;
+  max-width: fit-content; /* Set a max-width for larger screens */
+  margin: 20px auto; /* Center the div horizontally and add top margin */
+  border-radius: 10px; /* Slightly reduce border radius for a cleaner look */
   background-color: #1f1f1f;
-  margin-bottom: 20px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increase shadow for better depth */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+.AddPersonForm:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
 }
 
 /* Responsive Design - Adjustments for Small Screens (Tablets, Mobiles) */
