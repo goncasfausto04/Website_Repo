@@ -7,14 +7,17 @@ body {
 body {
   font-family: "Comic Sans MS", cursive, sans-serif;
   text-align: center;
-  background-color: #121212; /* Dark background */
   margin: 0;
   padding: 0;
   display: flex; /* Use flexbox for layout */
   flex-direction: column; /* Stack children vertically */
-  background-image: url("bg.jpg"); /* Set your background image */
-  background-size: cover; /* Ensure the image covers the entire background */
-  background-position: center; /* Center the background image */
+  
+  /* From Uiverse.io by adamgiebl */
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #161616;
+  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+                    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
 }
 
 h1,
@@ -49,8 +52,6 @@ nav ul li {
 nav ul li a {
   color: #ffffff; /* White text for links */
   text-decoration: none;
-  font-weight: bold;
-  transition: color 0.3s; /* Smooth transition for hover effect */
 }
 
 nav ul li a:hover {

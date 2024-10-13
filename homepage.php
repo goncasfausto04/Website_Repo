@@ -1,6 +1,15 @@
 <?php
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+session_start();
+
+// Check if the user is logged in
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+    // Not logged in, redirect to the login page
+    header("Location: index.html");
+    exit();
+}
+
+// Retrieve the username from session
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'User'; // Fallback to 'User'
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +19,7 @@ ini_set('display_errors', 1);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MemeOrgy</title>
-    <link rel="stylesheet" href="index.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="template.css"> <!-- Link to your CSS file -->
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
@@ -26,10 +35,10 @@ ini_set('display_errors', 1);
     <header>
         <nav>
             <ul class="left">
-                <li><a href="index.php"
+                <li><a href="homepage.php"
                         class="<?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active' : ''; ?>">
                         <i
-                            class="fas fa-home <?php echo (basename($_SERVER['PHP_SELF']) == 'index.php') ? 'active-icon' : ''; ?>"></i>
+                            class="fas fa-home <?php echo (basename($_SERVER['PHP_SELF']) == 'homepage.php') ? 'active-icon' : ''; ?>"></i>
                     </a></li>
             </ul>
             <ul class="right">
@@ -40,8 +49,10 @@ ini_set('display_errors', 1);
         </nav>
     </header>
 
-    <h1>Welcome</h1>
-
+    <h1>Welcome, <?php echo htmlspecialchars($username); ?>!</h1> <!-- Display the username -->
+    <form action="logout.php" method="post">
+        <button type="submit">Logout</button>
+    </form>
     <footer>
         <div class="footer-content">
             <h>Meme Orgy</h>
