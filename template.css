@@ -165,6 +165,8 @@ footer {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
+
+
 @media (max-width: 768px) {
   body {
     font-size: 16px;
