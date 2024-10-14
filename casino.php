@@ -78,6 +78,7 @@ include "session.php";
         <button id="stand-button">Stand</button>
         <p id="game-message"></p>
     </div>
+    
 
 
     <footer>
@@ -86,89 +87,98 @@ include "session.php";
             <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
         </div>
     </footer>
-
     <script>
-        let playerHand = [];
-        let dealerHand = [];
-        let playerScore = 0;
-        let dealerScore = 0;
+    let playerHand = [];
+    let dealerHand = [];
+    let playerScore = 0;
+    let dealerScore = 0;
 
-        function getRandomCard() {
-            return Math.floor(Math.random() * 11) + 1;
-        }
+    function getRandomCard() {
+        // Generate a random card value between 2 and 11 (Ace as 11)
+        return Math.floor(Math.random() * 10) + 2; // This generates numbers 2-11
+    }
 
-        function updateScores() {
+    function adjustForAces() {
+        // Adjust player score if it exceeds 21 and has Aces
+        playerScore = playerHand.reduce((acc, card) => acc + card, 0);
+        while (playerScore > 21 && playerHand.includes(11)) {
+            playerHand[playerHand.indexOf(11)] = 1; // Change an Ace from 11 to 1
             playerScore = playerHand.reduce((acc, card) => acc + card, 0);
-            dealerScore = dealerHand.reduce((acc, card) => acc + card, 0);
-            document.getElementById('player-score').innerText = `Score: ${playerScore}`;
-            document.getElementById('dealer-score').innerText = `Score: ${dealerScore}`;
         }
+    }
 
-        function displayHands() {
-            document.getElementById('player-cards').innerText = playerHand.join(', ');
-            document.getElementById('dealer-cards').innerText = dealerHand.join(', ');
+    function updateScores() {
+        adjustForAces(); // Call this to adjust for Aces
+        dealerScore = dealerHand.reduce((acc, card) => acc + card, 0);
+        document.getElementById('player-score').innerText = `Score: ${playerScore}`;
+        document.getElementById('dealer-score').innerText = `Score: ${dealerScore}`;
+    }
+
+    function displayHands() {
+        document.getElementById('player-cards').innerText = playerHand.join(', ');
+        document.getElementById('dealer-cards').innerText = dealerHand.join(', ');
+    }
+
+    function checkGameOver() {
+        if (playerScore > 21) {
+            document.getElementById('game-message').innerText = "You bust! Dealer wins.";
+            setTimeout(resetGame, 2000);
+            return true;
+        } else if (dealerScore > 21) {
+            document.getElementById('game-message').innerText = "Dealer busts! You win!";
+            setTimeout(resetGame, 2000);
+            return true;
         }
+        return false;
+    }
 
-        function checkGameOver() {
-            if (playerScore > 21) {
-                document.getElementById('game-message').innerText = "You bust! Dealer wins.";
-                setTimeout(resetGame, 2000);
-                return true;
-            } else if (dealerScore > 21) {
-                document.getElementById('game-message').innerText = "Dealer busts! You win!";
-                setTimeout(resetGame, 2000);
-                return true;
-            }
-            return false;
-        }
+    function resetGame() {
+        playerHand = [];
+        dealerHand = [];
+        playerScore = 0;
+        dealerScore = 0;
+        document.getElementById('game-message').innerText = "";
+        document.getElementById('player-cards').innerText = "";
+        document.getElementById('dealer-cards').innerText = "";
+        document.getElementById('player-score').innerText = "Score: 0";
+        document.getElementById('dealer-score').innerText = "Score: 0";
+        startNewGame();
+    }
 
-        function resetGame() {
-            playerHand = [];
-            dealerHand = [];
-            playerScore = 0;
-            dealerScore = 0;
-            document.getElementById('game-message').innerText = "";
-            document.getElementById('player-cards').innerText = "";
-            document.getElementById('dealer-cards').innerText = "";
-            document.getElementById('player-score').innerText = "Score: 0";
-            document.getElementById('dealer-score').innerText = "Score: 0";
-            startNewGame();
-        }
+    function startNewGame() {
+        playerHand.push(getRandomCard(), getRandomCard());
+        dealerHand.push(getRandomCard());
+        updateScores();
+        displayHands();
+    }
 
-        function startNewGame() {
-            playerHand.push(getRandomCard(), getRandomCard());
+    document.getElementById('hit-button').addEventListener('click', () => {
+        playerHand.push(getRandomCard());
+        updateScores();
+        displayHands();
+        checkGameOver();
+    });
+
+    document.getElementById('stand-button').addEventListener('click', () => {
+        while (dealerScore < 17) {
             dealerHand.push(getRandomCard());
             updateScores();
             displayHands();
         }
-
-        document.getElementById('hit-button').addEventListener('click', () => {
-            playerHand.push(getRandomCard());
-            updateScores();
-            displayHands();
-            checkGameOver();
-        });
-
-        document.getElementById('stand-button').addEventListener('click', () => {
-            while (dealerScore < 17) {
-                dealerHand.push(getRandomCard());
-                updateScores();
-                displayHands();
+        if (!checkGameOver()) {
+            if (playerScore > dealerScore) {
+                document.getElementById('game-message').innerText = "You win!";
+            } else if (playerScore < dealerScore) {
+                document.getElementById('game-message').innerText = "Dealer wins!";
+            } else {
+                document.getElementById('game-message').innerText = "It's a tie!";
             }
-            if (!checkGameOver()) {
-                if (playerScore > dealerScore) {
-                    document.getElementById('game-message').innerText = "You win!";
-                } else if (playerScore < dealerScore) {
-                    document.getElementById('game-message').innerText = "Dealer wins!";
-                } else {
-                    document.getElementById('game-message').innerText = "It's a tie!";
-                }
-                setTimeout(resetGame, 2000);
-            }
-        });
+            setTimeout(resetGame, 2000);
+        }
+    });
 
-        startNewGame();
-    </script>
+    startNewGame();
+</script>
 
 </body>
 
