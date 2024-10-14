@@ -1,23 +1,7 @@
 <?php
 session_start(); // Start a session
 
-// Enable error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Database connection
-$servername = "localhost"; // DB server name
-$username = "root"; // DB username
-$password = ""; // DB password
-$dbname = "fumblemeterdb"; // Database name
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
+include 'db_connection.php';
 // Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password_input = $_POST['password'];
