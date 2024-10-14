@@ -54,7 +54,7 @@ include "session.php";
                 <li><a href="homepage.php"><i class="fas fa-home"></i></a></li>
             </ul>
             <ul class="right">
-                <li><a href="fumblemeter.php">Rocket League Meter</a></li>
+                <li><a href="fumblemeter.php">FumbleMeter</a></li>
                 <li><a href="casino.php" class="active">Casino</a></li>
                 <li><a href="aboutus.php" id="about-us-link">About Us</a></li>
             </ul>

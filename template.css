@@ -1,7 +1,7 @@
 /* Base Styles */
 html,
 body {
-  height: 100%; /* Full height for body and html */
+  height: 100%;
 }
 
 body {
@@ -9,10 +9,9 @@ body {
   text-align: center;
   margin: 0;
   padding: 0;
-  display: flex; /* Use flexbox for layout */
-  flex-direction: column; /* Stack children vertically */
+  display: flex;
+  flex-direction: column;
   
-  /* From Uiverse.io by adamgiebl */
   --color: rgba(114, 114, 114, 0.3);
   background-color: #161616;
   background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
@@ -22,27 +21,27 @@ body {
 
 h1,
 h2 {
-  color: #e0e0e0; /* Light gray text color */
+  color: #e0e0e0;
 }
 
 /* Header Styles */
 header {
-  background-color: #1e1e1e; /* Slightly lighter dark background for header */
+  background-color: #1e1e1e;
   padding: 10px 0;
 }
 
 /* Navigation Styles */
 nav {
   display: flex;
-  justify-content: space-between; /* Space between left and right nav items */
-  align-items: center; /* Center vertically */
+  justify-content: space-between;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  display: flex; /* Combine left and right nav styles */
+  display: flex;
 }
 
 nav ul li {
@@ -50,49 +49,48 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #ffffff; /* White text for links */
+  color: #ffffff;
   text-decoration: none;
 }
 
 nav ul li a:hover {
-  color: #be3233; /* Highlight color on hover */
+  color: #be3233;
 }
 
 nav ul li a.active {
-  color: rgb(199, 31, 31); /* Active tab color */
-  border-radius: 5px; /* Rounded corners for the active tab */
+  color: rgb(199, 31, 31);
+  border-radius: 5px;
 }
 
 /* Table Styles */
 table {
-  width: fit-content; /* Table width for larger screens */
-  height: fit-content; /* Table height for larger screens */
-  margin: 20px auto; /* Center the table */
-  border-collapse: separate; /* Change to separate */
-  background-color: #242424; /* Darker background for the table */
-  border-radius: 10px; /* Rounded corners */
-  overflow: hidden; /* Ensure the rounded corners are visible */
+  width: fit-content;
+  margin: 20px auto;
+  border-collapse: separate;
+  background-color: #242424;
+  border-radius: 10px;
+  overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
 th {
-  background-color: #be3233; /* Header background */
+  background-color: #be3233;
   color: white;
   padding: 15px;
 }
 
 td {
   padding: 10px;
-  border: 1px solid #444; /* Darker border for the table cells */
-  color: #e0e0e0; /* Light text color for table data */
+  border: 1px solid #444;
+  color: #e0e0e0;
 }
 
 tr:nth-child(even) {
-  background-color: #333; /* Darker row for even rows */
+  background-color: #333;
 }
 
 tr:hover {
-  background-color: #444; /* Slightly lighter on hover */
+  background-color: #444;
 }
 
 /* Button Styles */
@@ -103,21 +101,21 @@ button,
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  transition: background-color 0.3s; /* Smooth transition for hover effect */
+  transition: background-color 0.3s;
   font-family: "Comic Sans MS", cursive, sans-serif;
 }
 
 button {
-  background-color: #666666; /* Dark button color */
+  background-color: #666666;
   color: white;
 }
 
 button:hover {
-  background-color: #be3233; /* Highlight on hover */
+  background-color: #be3233;
 }
 
 #removebtn {
-  background-color: #be3233; /* Red color for the remove button */
+  background-color: #be3233;
 }
 
 /* Form Styles */
@@ -130,9 +128,9 @@ input[type="text"] {
   font-size: 16px;
   width: 200px;
   margin-right: 10px;
-  background-color: #333; /* Dark background for input */
-  color: #e0e0e0; /* Light text color for input */
-  border: 1px solid #444; /* Darker border for input */
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
 }
 
 /* Footer Styles */
@@ -141,7 +139,7 @@ footer {
   color: white;
   text-align: center;
   padding: 15px 0;
-  margin-top: auto; /* Push footer to the bottom */
+  margin-top: auto;
   width: 100%;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
@@ -155,34 +153,52 @@ footer {
   margin: 5px 0 0;
   font-size: 14px;
 }
+
 .AddPersonForm {
-  padding: 15px; /* Increase padding for better spacing */
+  padding: 15px;
   border: 1px solid #444;
-  max-width: fit-content; /* Set a max-width for larger screens */
-  margin: 20px auto; /* Center the div horizontally and add top margin */
-  border-radius: 10px; /* Slightly reduce border radius for a cleaner look */
+  max-width: fit-content;
+  margin: 20px auto;
+  border-radius: 10px;
   background-color: #1f1f1f;
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Increase shadow for better depth */
-  transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .AddPersonForm:hover {
-  transform: scale(1.05); /* Slightly enlarge on hover */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
 /* Responsive Design - Adjustments for Small Screens (Tablets, Mobiles) */
 @media (max-width: 768px) {
   body {
-    font-size: 16px; /* Adjust font size for readability */
+    font-size: 16px;
   }
 
   table {
-    width: 90%; /* Increase width on smaller screens but not full */
+    width: 90%; /* Increase width on smaller screens */
+    display: block; /* Block display for better layout */
+    overflow-x: auto; /* Allow horizontal scrolling */
+  }
+
+  tr {
+    display: flex;
+    flex-direction: column; /* Stack table rows */
+    margin-bottom: 10px; /* Space between rows */
+    border: 1px solid #444; /* Add border for clarity */
+  }
+
+  th,
+  td {
+    display: flex;
+    justify-content: space-between; /* Space cells */
+    padding: 10px;
+    width: 100%; /* Full width for cells */
   }
 
   nav ul {
-    flex-direction: column; /* Stack navigation items vertically */
+    flex-direction: column; /* Stack navigation items */
     text-align: left;
   }
 
@@ -190,18 +206,21 @@ footer {
     margin: 10px 0;
   }
 
-  /* Adjust button sizes and paddings for smaller screens */
   button,
   #removebtn {
     padding: 8px 12px;
     font-size: 14px;
   }
 
-  /* Responsive table: Adjust cells for small screens */
   td,
   th {
-    font-size: 14px; /* Smaller font size in the table */
+    font-size: 14px; /* Smaller font size */
     padding: 8px;
+  }
+
+  .AddPersonForm {
+    width: 95%; /* Full width for forms */
+    margin: 0 auto; /* Center the form */
   }
 }
 
@@ -209,11 +228,11 @@ footer {
 @media (max-width: 480px) {
   h1,
   h2 {
-    font-size: 18px; /* Smaller headings */
+    font-size: 18px;
   }
 
   input[type="text"] {
-    width: 100%; /* Full-width input field for mobile */
+    width: 100%; /* Full-width input field */
   }
 
   button,

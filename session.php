@@ -8,4 +8,8 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
     header("Location: index.html");
     exit();
 }
+
+
+// Retrieve the username from session
+$username = isset($_SESSION['username']) ? $_SESSION['username'] : 'User'; // Fallback to 'User'
 ?>

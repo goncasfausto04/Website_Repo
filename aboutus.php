@@ -10,43 +10,65 @@
     <!-- Import the Allison font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allison&display=swap">
     <style>
+    .memeorgy-title {
+        font-family: 'Allison', cursive;
+        color: white;
+        font-size: 200px;
+        margin-bottom: 40px;
+        text-align: center;
+        transition: all 0.6s ease;
+        background: linear-gradient(135deg, #f06, #f79c42);
+        width: fit-content;
+        margin: auto;
+        padding: 50px;
+        border-radius: 50%;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transform: rotate(-5deg);
+    }
+
+    .memeorgy-title .meme {
+        color: white;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .memeorgy-title .orgy {
+        color: #A02727;
+        text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Hover effect */
+    .memeorgy-title:hover {
+        font-size: 220px;
+        transform: rotate(0);
+        background: linear-gradient(135deg, #f79c42, #f06);
+    }
+
+    /* Media query for smaller screens */
+    @media (max-width: 768px) {
         .memeorgy-title {
-            font-family: 'Allison', cursive;
-            color: white;
-            font-size: 200px;
-            margin-bottom: 40px;
-            text-align: center;
-            transition: font-size 0.6s ease, margin-top 0.6s ease;
-            background-color: gray;
-            width: fit-content;
-            margin: auto;
-            padding: 50px;
-            border-radius: 50%;
+            font-size: 100px;
+            padding: 30px;
         }
+        .memeorgy-title:hover {
+        font-size: 110px;
+        transform: rotate(0);
+        background: linear-gradient(135deg, #f79c42, #f06);
+    }
+    }
 
-        .memeorgy-title .meme {
-            color: black;
+    @media (max-width: 480px) {
+        .memeorgy-title {
+            font-size: 80px;
+            padding: 20px;
         }
+        .memeorgy-title:hover {
+        font-size: 90px;
+        transform: rotate(0);
+        background: linear-gradient(135deg, #f79c42, #f06);
+    }
+    }
+</style>
 
-        .memeorgy-title .orgy {
-            color: #A02727;
-        }
-
-        /* Media query for smaller screens */
-        @media (max-width: 768px) {
-            .memeorgy-title {
-                font-size: 100px;
-                padding: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .memeorgy-title {
-                font-size: 80px;
-                padding: 20px;
-            }
-        }
-    </style>
 </head>
 
 <body>
@@ -56,7 +78,7 @@
                 <li><a href="homepage.php"><i class="fas fa-home"></i></a></li>
             </ul>
             <ul class="right">
-                <li><a href="fumblemeter.php">Rocket League Meter</a></li>
+                <li><a href="fumblemeter.php">FumbleMeter</a></li>
                 <li><a href="casino.php">Casino</a></li>
                 <li><a href="#" id="about-us-link" class="active">About Us</a></li>
             </ul>
