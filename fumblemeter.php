@@ -3,7 +3,6 @@
 include 'session.php';
 include 'db_connection.php';
 
-// Get all users and their stats
 $sql = "SELECT name, fumbles, goals_stolen, good_plays FROM counters";
 $result = $conn->query($sql);
 
@@ -14,36 +13,31 @@ if ($result && $result->num_rows > 0) {
     }
 }
 
-// Increment the stats when a button is pressed
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['stat'])) {
     $name = $_POST["name"];
     $stat = $_POST["stat"];
 
-    // Using prepared statement for security
     $stmt = $conn->prepare("UPDATE counters SET $stat = $stat + 1 WHERE name = ?");
     $stmt->bind_param("s", $name);
     $stmt->execute();
     $stmt->close();
 
-    header("Location: fumblemeter.php"); // Avoid form re-submission
+    header("Location: fumblemeter.php");
     exit();
 }
 
-// Add new person to the database
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['new_person'])) {
     $new_name = $_POST['new_person'];
 
-    // Using prepared statement to insert a new person
     $stmt = $conn->prepare("INSERT INTO counters (name, fumbles, goals_stolen, good_plays) VALUES (?, 0, 0, 0)");
     $stmt->bind_param("s", $new_name);
     $stmt->execute();
     $stmt->close();
 
-    header("Location: fumblemeter.php"); // Avoid form re-submission
+    header("Location: fumblemeter.php");
     exit();
 }
 
-// Remove a person from the database
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['remove_name'])) {
     $remove_name = $_POST['remove_name'];
 
@@ -53,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['remove_name'])) {
     $stmt->execute();
     $stmt->close();
 
-    header("Location: fumblemeter.php"); // Avoid form re-submission
+    header("Location: fumblemeter.php");
     exit();
 }
 

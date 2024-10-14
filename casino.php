@@ -9,7 +9,7 @@ include "session.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Casino</title>
-    <link rel="stylesheet" href="template.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="template.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
@@ -94,7 +94,7 @@ include "session.php";
         let dealerScore = 0;
 
         function getRandomCard() {
-            return Math.floor(Math.random() * 11) + 1; // Cards 1-11
+            return Math.floor(Math.random() * 11) + 1;
         }
 
         function updateScores() {
@@ -112,11 +112,11 @@ include "session.php";
         function checkGameOver() {
             if (playerScore > 21) {
                 document.getElementById('game-message').innerText = "You bust! Dealer wins.";
-                setTimeout(resetGame, 2000); // Reset after 2 seconds
+                setTimeout(resetGame, 2000);
                 return true;
             } else if (dealerScore > 21) {
                 document.getElementById('game-message').innerText = "Dealer busts! You win!";
-                setTimeout(resetGame, 2000); // Reset after 2 seconds
+                setTimeout(resetGame, 2000);
                 return true;
             }
             return false;
@@ -163,11 +163,10 @@ include "session.php";
                 } else {
                     document.getElementById('game-message').innerText = "It's a tie!";
                 }
-                setTimeout(resetGame, 2000); // Reset after 2 seconds
+                setTimeout(resetGame, 2000);
             }
         });
 
-        // Start the game
         startNewGame();
     </script>
 

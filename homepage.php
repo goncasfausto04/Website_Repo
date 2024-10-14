@@ -9,13 +9,12 @@ include "session.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MemeOrgy</title>
-    <link rel="stylesheet" href="template.css"> <!-- Link to your CSS file -->
+    <link rel="stylesheet" href="template.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Additional styles for the active link */
         .active-icon {
-            color: red; /* Set the icon color to red */
+            color: red;
         }
 
         @import url(https://fonts.googleapis.com/css?family=Anaheim);
@@ -23,8 +22,8 @@ include "session.php";
 
         .container {
     margin: 4% auto;
-    width: 210px; /* Adjust width to fit your design */
-    height: 140px; /* Adjust height to fit your design */
+    width: 210px;
+    height: 140px;
     position: relative;
     perspective: 1000px;
 }
@@ -65,7 +64,7 @@ include "session.php";
 img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures the image fills the container without distortion */
+    object-fit: cover;
     cursor: pointer;
     transition: all .5s ease;
 }
@@ -83,8 +82,6 @@ img:hover {
     }
 }
 
-
-/* Style for the logout button */
 .logout-btn {
     display: block;
     margin: 20px auto;
@@ -100,8 +97,6 @@ img:hover {
     background-color: #ff1f1f;
 }
 
-
-        /* Style for the logout button */
         .logout-btn {
             display: block;
             margin: 20px auto;
@@ -117,8 +112,6 @@ img:hover {
             background-color: #ff1f1f;
         }
 
-
-/* Import the Allison font from Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Allison&display=swap');
 
 .rainbow-text {
@@ -128,7 +121,6 @@ img:hover {
     color: transparent;
     font-weight: bold;
 }
-
 
     </style>
 </head>
@@ -185,7 +177,6 @@ img:hover {
             return confirm("Are you sure you want to log out?");
         }
 
-        
     </script>
 </body>
 
