@@ -1,17 +1,15 @@
 <?php
+session_start();
 include 'db_connection.php';
 
-// Fetch messages from the chat_messages table
-$sql = "SELECT username, message FROM chat_messages ORDER BY timestamp ASC";
+$sql = "SELECT username, message, created_at FROM chat_messages ORDER BY created_at DESC LIMIT 50"; // Adjust the limit as needed
 $result = $conn->query($sql);
 
-if (!$result) {
-    die("Query failed: " . $conn->error);
-}
-
 $messages = [];
-while ($row = $result->fetch_assoc()) {
-    $messages[] = $row;
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        $messages[] = $row;
+    }
 }
 
 echo json_encode($messages);
