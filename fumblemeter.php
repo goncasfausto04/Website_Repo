@@ -93,46 +93,48 @@ $conn->close();
                 </tr>
             </thead>
             <tbody>
-    <?php foreach ($users as $user): ?>
-        <tr>
-            <td><?php echo htmlspecialchars($user['name']); ?></td>
-            <td><?php echo htmlspecialchars($user['fumbles']); ?></td>
-            <td><?php echo htmlspecialchars($user['goals_stolen']); ?></td>
-            <td><?php echo htmlspecialchars($user['good_plays']); ?></td>
-            <td>
-                <form method="post" style="display:inline;">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($user['name']); ?>">
-                    <input type="hidden" name="stat" value="fumbles">
-                    <button type="submit">Fumble</button>
-                </form>
-                <form method="post" style="display:inline;">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($user['name']); ?>">
-                    <input type="hidden" name="stat" value="goals_stolen">
-                    <button type="submit">Goal Stolen</button>
-                </form>
-                <form method="post" style="display:inline;">
-                    <input type="hidden" name="name" value="<?php echo htmlspecialchars($user['name']); ?>">
-                    <input type="hidden" name="stat" value="good_plays">
-                    <button type="submit">Good Play</button>
-                </form>
-                <form method="post" style="display:inline;" onsubmit="return confirm('Are you sure you want to remove this person?');">
-                    <input type="hidden" name="remove_name" value="<?php echo htmlspecialchars($user['name']); ?>">
-                    <button type="submit" id="removebtn">Remove</button>
-                </form>
-            </td>
-        </tr>
-    <?php endforeach; ?>
-</tbody>
-</table>
-</div>
-<div class="AddPersonForm">
-    <h2>Add a New Person</h2>
-    <form method="post">
-        <label for="new_person" style="color: white;">Enter Name: </label>
-        <input type="text" name="new_person" id="new_person" required>
-        <button type="submit">Add Person</button>
-    </form>
-</div>
+                <?php foreach ($users as $user): ?>
+                    <tr>
+                        <td><?php echo htmlspecialchars($user['name']); ?></td>
+                        <td><?php echo htmlspecialchars($user['fumbles']); ?></td>
+                        <td><?php echo htmlspecialchars($user['goals_stolen']); ?></td>
+                        <td><?php echo htmlspecialchars($user['good_plays']); ?></td>
+                        <td>
+                            <form method="post" style="display:inline;">
+                                <input type="hidden" name="name" value="<?php echo htmlspecialchars($user['name']); ?>">
+                                <input type="hidden" name="stat" value="fumbles">
+                                <button type="submit">Fumble</button>
+                            </form>
+                            <form method="post" style="display:inline;">
+                                <input type="hidden" name="name" value="<?php echo htmlspecialchars($user['name']); ?>">
+                                <input type="hidden" name="stat" value="goals_stolen">
+                                <button type="submit">Goal Stolen</button>
+                            </form>
+                            <form method="post" style="display:inline;">
+                                <input type="hidden" name="name" value="<?php echo htmlspecialchars($user['name']); ?>">
+                                <input type="hidden" name="stat" value="good_plays">
+                                <button type="submit">Good Play</button>
+                            </form>
+                            <form method="post" style="display:inline;"
+                                onsubmit="return confirm('Are you sure you want to remove this person?');">
+                                <input type="hidden" name="remove_name"
+                                    value="<?php echo htmlspecialchars($user['name']); ?>">
+                                <button type="submit" id="removebtn">Remove</button>
+                            </form>
+                        </td>
+                    </tr>
+                <?php endforeach; ?>
+            </tbody>
+        </table>
+    </div>
+    <div class="AddPersonForm">
+        <h2>Add a New Person</h2>
+        <form method="post">
+            <label for="new_person" style="color: white;">Enter Name: </label>
+            <input type="text" name="new_person" id="new_person" required>
+            <button type="submit">Add Person</button>
+        </form>
+    </div>
 </body>
 <footer>
     <div class="footer-content">

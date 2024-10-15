@@ -10,11 +10,33 @@ body {
   padding: 0;
   display: flex;
   flex-direction: column;
-  
+
   --color: rgba(114, 114, 114, 0.3);
   background-color: #161616;
-  background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
-                    linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
   background-size: 55px 55px;
 }
 
@@ -27,7 +49,6 @@ header {
   background-color: #1e1e1e;
   padding: 10px 0;
   margin: 0;
-  
 }
 
 nav {
@@ -164,8 +185,6 @@ footer {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
-
-
 
 @media (max-width: 768px) {
   body {

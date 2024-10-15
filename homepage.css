@@ -4,18 +4,6 @@
 
 @import url(https://fonts.googleapis.com/css?family=Anaheim);
 
-.send-btn {
-  background-color: #ff9800;
-  border: none;
-  border-radius: 5px;
-  padding: 8px 15px;
-  color: white;
-  cursor: pointer;
-}
-
-.send-btn:hover {
-  background-color: #ff5722;
-}
 /* Existing styles */
 .container {
   margin: 4% auto;
