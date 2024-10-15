@@ -13,26 +13,37 @@ include "session.php";
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
-        #blackjack-game {
+        .game-container {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-start;
+            margin-top: 20px;
+        }
+
+        #blackjack-game,
+        #slot-machine {
             background-color: #1f1f1f;
-            padding: 20px;
+            padding: 15px;
             border-radius: 10px;
             color: white;
             text-align: center;
-            width: fit-content;
-            padding: 40px;
-            margin: 0 auto;
+            width: 250px;
+            /* Set fixed width */
+            margin: 0 10px;
+            /* Reduce margin for compactness */
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
         #player-hand,
-        #dealer-hand {
-            margin: 10px 0;
+        #dealer-hand,
+        #slot-reels {
+            margin: 5px 0;
+            /* Reduced margin */
         }
 
         button {
             margin: 5px;
-            padding: 10px;
+            padding: 8px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -43,6 +54,31 @@ include "session.php";
 
         button:hover {
             background-color: #666666;
+        }
+
+        /* Slots displayed horizontally */
+        #slot-reels {
+            display: flex;
+            justify-content: center;
+            margin-top: 10px;
+        }
+
+        .reel {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            font-size: 2em;
+            border: 2px solid #fff;
+            margin: 0 5px;
+            background-color: #333;
+            color: white;
+        }
+
+
+        #slot-message {
+            margin-top: 10px;
         }
     </style>
 </head>
@@ -62,24 +98,40 @@ include "session.php";
     </header>
 
     <h1>Casino</h1>
-    <div id="blackjack-game">
-        <h2>Blackjack Game</h2>
-        <div id="player-hand">
-            <h3>Your Hand</h3>
-            <div id="player-cards"></div>
-            <p id="player-score">Score: 0</p>
+
+    <div class="game-container">
+        <!-- Blackjack Game -->
+        <div id="blackjack-game">
+            <h2>Blackjack Game</h2>
+            <div id="player-hand">
+                <h3>Your Hand</h3>
+                <div id="player-cards"></div>
+                <p id="player-score">Score: 0</p>
+            </div>
+            <div id="dealer-hand">
+                <h3>Dealer's Hand</h3>
+                <div id="dealer-cards"></div>
+                <p id="dealer-score">Score: 0</p>
+            </div>
+            <button id="hit-button">Hit</button>
+            <button id="stand-button">Stand</button>
+            <p id="game-message"></p>
         </div>
-        <div id="dealer-hand">
-            <h3>Dealer's Hand</h3>
-            <div id="dealer-cards"></div>
-            <p id="dealer-score">Score: 0</p>
+
+        <!-- Slot Machine Game -->
+        <div id="slot-machine">
+            <h2>Slot Machine</h2>
+            <div id="slot-reels">
+                <div class="reel" id="reel1">🍒</div>
+                <div class="reel" id="reel2">🍒</div>
+                <div class="reel" id="reel3">🍒</div>
+            </div>
+            <button id="spin-button">Spin</button>
+            <p id="slot-message"></p>
         </div>
-        <button id="hit-button">Hit</button>
-        <button id="stand-button">Stand</button>
-        <p id="game-message"></p>
+
+
     </div>
-
-
 
     <footer>
         <div class="footer-content">
@@ -87,99 +139,7 @@ include "session.php";
             <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
         </div>
     </footer>
-    <script>
-        let playerHand = [];
-        let dealerHand = [];
-        let playerScore = 0;
-        let dealerScore = 0;
-
-        function getRandomCard() {
-            // Generate a random card value between 2 and 11 (Ace as 11)
-            return Math.floor(Math.random() * 10) + 2; // This generates numbers 2-11
-        }
-
-        function adjustForAces() {
-            // Adjust player score if it exceeds 21 and has Aces
-            playerScore = playerHand.reduce((acc, card) => acc + card, 0);
-            while (playerScore > 21 && playerHand.includes(11)) {
-                playerHand[playerHand.indexOf(11)] = 1; // Change an Ace from 11 to 1
-                playerScore = playerHand.reduce((acc, card) => acc + card, 0);
-            }
-        }
-
-        function updateScores() {
-            adjustForAces(); // Call this to adjust for Aces
-            dealerScore = dealerHand.reduce((acc, card) => acc + card, 0);
-            document.getElementById('player-score').innerText = `Score: ${playerScore}`;
-            document.getElementById('dealer-score').innerText = `Score: ${dealerScore}`;
-        }
-
-        function displayHands() {
-            document.getElementById('player-cards').innerText = playerHand.join(', ');
-            document.getElementById('dealer-cards').innerText = dealerHand.join(', ');
-        }
-
-        function checkGameOver() {
-            if (playerScore > 21) {
-                document.getElementById('game-message').innerText = "You bust! Dealer wins.";
-                setTimeout(resetGame, 2000);
-                return true;
-            } else if (dealerScore > 21) {
-                document.getElementById('game-message').innerText = "Dealer busts! You win!";
-                setTimeout(resetGame, 2000);
-                return true;
-            }
-            return false;
-        }
-
-        function resetGame() {
-            playerHand = [];
-            dealerHand = [];
-            playerScore = 0;
-            dealerScore = 0;
-            document.getElementById('game-message').innerText = "";
-            document.getElementById('player-cards').innerText = "";
-            document.getElementById('dealer-cards').innerText = "";
-            document.getElementById('player-score').innerText = "Score: 0";
-            document.getElementById('dealer-score').innerText = "Score: 0";
-            startNewGame();
-        }
-
-        function startNewGame() {
-            playerHand.push(getRandomCard(), getRandomCard());
-            dealerHand.push(getRandomCard());
-            updateScores();
-            displayHands();
-        }
-
-        document.getElementById('hit-button').addEventListener('click', () => {
-            playerHand.push(getRandomCard());
-            updateScores();
-            displayHands();
-            checkGameOver();
-        });
-
-        document.getElementById('stand-button').addEventListener('click', () => {
-            while (dealerScore < 17) {
-                dealerHand.push(getRandomCard());
-                updateScores();
-                displayHands();
-            }
-            if (!checkGameOver()) {
-                if (playerScore > dealerScore) {
-                    document.getElementById('game-message').innerText = "You win!";
-                } else if (playerScore < dealerScore) {
-                    document.getElementById('game-message').innerText = "Dealer wins!";
-                } else {
-                    document.getElementById('game-message').innerText = "It's a tie!";
-                }
-                setTimeout(resetGame, 2000);
-            }
-        });
-
-        startNewGame();
-    </script>
-
+    <script src="casino.js"></script>
 </body>
 
 </html>
