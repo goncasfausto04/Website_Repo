@@ -149,3 +149,43 @@ button:active {
 button:active:after {
     box-shadow: 0 0px 0 0 rgb(0 0 0 / 15%);
 }
+
+table {
+    width: fit-content;
+    margin: 20px auto;
+    border-collapse: separate;
+    background-color: #242424;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+th {
+    background-color: #be3233;
+    color: white;
+    padding: 15px;
+}
+
+td {
+    padding: 10px;
+    border: 1px solid #444;
+    color: #e0e0e0;
+}
+
+tr:nth-child(even) {
+    background-color: #333;
+}
+
+tr:hover {
+    background-color: #444;
+}
+
+#removebtn {
+    padding: 10px 20px;
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
