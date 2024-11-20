@@ -114,6 +114,7 @@ img:hover {
 .rainbow-text {
   font-family: "Allison", cursive;
   background: linear-gradient(90deg, red, orange, yellow, lime, cyan);
+  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   font-weight: bold;
