@@ -75,6 +75,7 @@ $conn->close();
             <ul class="right">
                 <li><a href="#" class="active" id="rocket-league-meter-link">FumbleMeter</a></li>
                 <li><a href="casino.php" id="casino-link">Casino</a></li>
+                <li><a href="minecraft.html" id="minecraft-link">Minecraft</a></li>
                 <li><a href="aboutus.php" id="about-us-link">About Us</a></li>
             </ul>
         </nav>
