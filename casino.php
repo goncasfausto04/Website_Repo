@@ -129,8 +129,6 @@ include "session.php";
             <button id="spin-button">Spin</button>
             <p id="slot-message"></p>
         </div>
-
-
     </div>
 
     <footer>

@@ -1,12 +1,17 @@
+<?php
+include "session.php";
+?>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us</title>
-    <link rel="stylesheet" href="template.css">
+    <link rel="stylesheet" href="template.css"> <!-- Link to your CSS file -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Import the Allison font from Google Fonts -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Allison&display=swap">
     <style>
         .memeorgy-title {
@@ -35,12 +40,14 @@
             text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
         }
 
+        /* Hover effect */
         .memeorgy-title:hover {
             font-size: 220px;
             transform: rotate(0);
             background: linear-gradient(135deg, #f79c42, #f06);
         }
 
+        /* Media query for smaller screens */
         @media (max-width: 768px) {
             .memeorgy-title {
                 font-size: 100px;
@@ -85,7 +92,10 @@
     </header>
 
     <h1>About Us</h1>
-    <h1 class="memeorgy-title"><span class="meme">Fucking</span><span class="orgy">Niggers</span></h1>
+    <h2> "Sabem que os dinossauros so foram extintos pq deus percebeu que eles nao podiam pagar o dizimo" - Mário Vicol,
+        2024 </h2>
+    <h2>"Esse toque que me deste foi a defesa que eu não fiz" - Mário Vicol, 2024</h2>
+    <h1 class="memeorgy-title"><span class="meme">Meme</span><span class="orgy">Orgy</span></h1>
 
     <footer>
         <div class="footer-content">

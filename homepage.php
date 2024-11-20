@@ -70,6 +70,7 @@ include "session.php";
             <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
         </div>
     </footer>
+
     <script>
         function confirmLogout() {
             return confirm("Are you sure you want to log out?");
