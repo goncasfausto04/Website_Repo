@@ -20,9 +20,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $result->fetch_assoc();
         $_SESSION['loggedin'] = true;
         $_SESSION['username'] = $user['user'];
-        header("Location: homepage.php");
+        header("Location: homepage");
         exit();
     } else {
+        echo "Password invalid";
         header("Location: index.html?error=invalid");
         exit();
     }

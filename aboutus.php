@@ -78,18 +78,10 @@ include "session.php";
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="left">
-                <li><a href="homepage.php"><i class="fas fa-home"></i></a></li>
-            </ul>
-            <ul class="right">
-                <li><a href="fumblemeter.php">FumbleMeter</a></li>
-                <li><a href="casino.php">Casino</a></li>
-                <li><a href="#" id="about-us-link" class="active">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+
+   <?php
+include 'header.php';
+?>
 
     <h1>About Us</h1>
     <h2> "Sabem que os dinossauros so foram extintos pq deus percebeu que eles nao podiam pagar o dizimo" - Mário Vicol,
@@ -104,5 +96,3 @@ include "session.php";
         </div>
     </footer>
 </body>
-
-</html>

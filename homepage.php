@@ -16,29 +16,10 @@ include "session.php";
 </head>
 
 <body>
-    <header>
-        <nav>
-            <ul class="left">
-                <li>
-                    <a href="homepage.php"
-                        class="<?= (basename($_SERVER['PHP_SELF']) == 'homepage.php') ? 'active' : ''; ?>">
-                        <i
-                            class="fas fa-home <?= (basename($_SERVER['PHP_SELF']) == 'homepage.php') ? 'active-icon' : ''; ?>"></i>
-                    </a>
-                </li>
-            </ul>
-            <ul class="right">
-                <li><a href="fumblemeter.php"
-                        class="<?= (basename($_SERVER['PHP_SELF']) == 'fumblemeter.php') ? 'active' : ''; ?>">FumbleMeter</a>
-                </li>
-                <li><a href="casino.php"
-                        class="<?= (basename($_SERVER['PHP_SELF']) == 'casino.php') ? 'active' : ''; ?>">Casino</a></li>
-                <li><a href="aboutus.php" id="about-us-link"
-                        class="<?= (basename($_SERVER['PHP_SELF']) == 'aboutus.php') ? 'active' : ''; ?>">About Us</a>
-                </li>
-            </ul>
-        </nav>
-    </header>
+    <?php
+include 'header.php';
+?>
+
 
     <main>
         <h1>Bem-Vindo ao <span class="rainbow-text">Meme</span> <span class="rainbow-text">Orgy</span>,
@@ -67,7 +48,7 @@ include "session.php";
     <footer>
         <div class="footer-content">
             <h>Meme Orgy</h>
-            <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
+            <p>&copy; 2024 Meme Orgy. All rights reserved.</p>
         </div>
     </footer>
 

@@ -66,19 +66,13 @@ $conn->close();
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 </head>
 
+
 <body>
-    <header>
-        <nav>
-            <ul class="left">
-                <li><a href="homepage.php"><i class="fas fa-home"></i></a></li>
-            </ul>
-            <ul class="right">
-                <li><a href="#" class="active" id="rocket-league-meter-link">FumbleMeter</a></li>
-                <li><a href="casino.php" id="casino-link">Casino</a></li>
-                <li><a href="aboutus.php" id="about-us-link">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
+
+<?php
+include 'header.php';
+?>
+
 
     <h1>Fumblemeter</h1>
     <div class="table-wrapper">
