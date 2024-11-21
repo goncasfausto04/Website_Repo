@@ -68,27 +68,12 @@ $conn->close();
 
 
 <body>
-<<<<<<< HEAD
+
 
 <?php
 include 'header.php';
 ?>
 
-=======
-    <header>
-        <nav>
-            <ul class="left">
-                <li><a href="homepage.php"><i class="fas fa-home"></i></a></li>
-            </ul>
-            <ul class="right">
-                <li><a href="#" class="active" id="rocket-league-meter-link">FumbleMeter</a></li>
-                <li><a href="casino.php" id="casino-link">Casino</a></li>
-                <li><a href="minecraft.html" id="minecraft-link">Minecraft</a></li>
-                <li><a href="aboutus.php" id="about-us-link">About Us</a></li>
-            </ul>
-        </nav>
-    </header>
->>>>>>> d6e299a2ad2fc08e62d92a58c176dd40ccf62652
 
     <h1>Fumblemeter</h1>
     <div class="table-wrapper">
