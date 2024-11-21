@@ -16,10 +16,34 @@ include "session.php";
 </head>
 
 <body>
+<<<<<<< HEAD
     <?php
 include 'header.php';
 ?>
 
+=======
+    <header>
+        <nav>
+            <ul class="left">
+                <li>
+                    <a href="homepage.php"
+                        class="active">
+                        <i
+                            class="fas fa-home <?= (basename($_SERVER['PHP_SELF']) == 'homepage.php') ? 'active-icon' : ''; ?>"></i>
+                    </a>
+                </li>
+            </ul>
+            <ul class="right">
+                <li><a href="fumblemeter.php">FumbleMeter</a>
+                </li>
+                <li><a href="casino.php">Casino</a></li>
+                <li><a href="minecraft.html">Minecraft</a></li>
+                <li><a href="aboutus.php" id="about-us-link">About Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+>>>>>>> d6e299a2ad2fc08e62d92a58c176dd40ccf62652
 
     <main>
         <h1>Bem-Vindo ao <span class="rainbow-text">Meme</span> <span class="rainbow-text">Orgy</span>,
