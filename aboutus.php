@@ -84,15 +84,12 @@ include 'header.php';
 ?>
 
     <h1>About Us</h1>
-    <h2> "Sabem que os dinossauros so foram extintos pq deus percebeu que eles nao podiam pagar o dizimo" - Mário Vicol,
-        2024 </h2>
-    <h2>"Esse toque que me deste foi a defesa que eu não fiz" - Mário Vicol, 2024</h2>
+    <h2> "Sopas de Chavalo Cansado" - Faustino, Gonçalo, 2024 </h2>
+    <h2>"O blud bateu as botas!" - Bernardino, Renato, 2024</h2>
+    <h2>"Variancias", Duarte, David, 2024</h2>
     <h1 class="memeorgy-title"><span class="meme">Meme</span><span class="orgy">Orgy</span></h1>
 
-    <footer>
-        <div class="footer-content">
-            <h>Meme Orgy</h>
-            <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php
+include 'footer.php';
+?>
 </body>

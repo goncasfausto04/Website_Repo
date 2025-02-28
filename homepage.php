@@ -34,7 +34,7 @@ include 'header.php';
             <figure><img src="images/tomas.jpg" alt=""></figure>
             <figure><img src="images/jesus.jpg" alt=""></figure>
             <figure><img src="images/renato.jpg" alt=""></figure>
-            <figure><img src="images/mario.jpg" alt=""></figure>
+            <figure><img src="images/david.jpg" alt=""></figure>
             <figure><img src="images/silva.jpg" alt=""></figure>
             <figure><img src="images/govi.jpg" alt=""></figure>
             <figure><img src="images/salmoes.jpg" alt=""></figure>
@@ -45,12 +45,9 @@ include 'header.php';
         <button type="submit" class="logout-btn">Logout</button>
     </form>
 
-    <footer>
-        <div class="footer-content">
-            <h>Meme Orgy</h>
-            <p>&copy; 2024 Meme Orgy. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php
+include 'footer.php';
+?>
 
     <script>
         function confirmLogout() {

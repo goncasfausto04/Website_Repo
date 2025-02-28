@@ -142,18 +142,14 @@ include 'header.php';
         <div id="buttons">
             <button onclick="window.location.href = 'minecraft_cord'"> Cords
             </button>
-            <button onclick="window.location.href = 'minecraft_list'" style="margin-left: 20px;"> Tasks
+            <button onclick="window.location.href = 'workinprogress'" style="margin-left: 20px;"> Tasks
             </button>
         </div>
 
     </div>
 </body>
-<footer>
-    <div class="footer-content">
-        <h>Meme Orgy</h>
-        <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
-    </div>
-</footer>
-
+<?php
+include 'footer.php';
+?>
 
 </html>

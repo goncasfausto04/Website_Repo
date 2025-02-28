@@ -123,12 +123,9 @@ include 'header.php';
         </div>
     </div>
 
-    <footer>
-        <div class="footer-content">
-            <h>Meme Orgy</h>
-            <p>&copy; 2023 Meme Orgy. All rights reserved.</p>
-        </div>
-    </footer>
+    <?php
+include 'footer.php';
+?>
     <script src="casino.js"></script>
 </body>
 
