@@ -79,9 +79,9 @@ include "session.php";
 
 <body>
 
-   <?php
-include 'header.php';
-?>
+    <?php
+    include 'header.php';
+    ?>
 
     <h1>About Us</h1>
     <h2> "Sopas de Chavalo Cansado" - Faustino, Gonçalo, 2024 </h2>
@@ -90,6 +90,6 @@ include 'header.php';
     <h1 class="memeorgy-title"><span class="meme">Meme</span><span class="orgy">Orgy</span></h1>
 
     <?php
-include 'footer.php';
-?>
+    include 'footer.php';
+    ?>
 </body>

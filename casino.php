@@ -84,9 +84,9 @@ include "session.php";
 </head>
 
 <body>
-<?php
-include 'header.php';
-?>
+    <?php
+    include 'header.php';
+    ?>
 
 
     <h1>Casino</h1>
@@ -124,8 +124,8 @@ include 'header.php';
     </div>
 
     <?php
-include 'footer.php';
-?>
+    include 'footer.php';
+    ?>
     <script src="casino.js"></script>
 </body>
 

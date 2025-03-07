@@ -18,8 +18,8 @@ include "session.php";
 <body>
 
     <?php
-include 'header.php';
-?>
+    include 'header.php';
+    ?>
 
     <main>
         <h1>Bem-Vindo ao <span class="rainbow-text">Meme</span> <span class="rainbow-text">Orgy</span>,
@@ -46,8 +46,8 @@ include 'header.php';
     </form>
 
     <?php
-include 'footer.php';
-?>
+    include 'footer.php';
+    ?>
 
     <script>
         function confirmLogout() {

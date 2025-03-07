@@ -70,9 +70,9 @@ $conn->close();
 <body>
 
 
-<?php
-include 'header.php';
-?>
+    <?php
+    include 'header.php';
+    ?>
 
 
     <h1>Fumblemeter</h1>

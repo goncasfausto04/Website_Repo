@@ -18,11 +18,11 @@ include "session.php";
 <body>
 
     <?php
-include 'header.php';
-?>
+    include 'header.php';
+    ?>
 
     <main>
-    <h1>WORK IN PROGRESS</h1>
+        <h1>WORK IN PROGRESS</h1>
     </main>
 
     <footer>

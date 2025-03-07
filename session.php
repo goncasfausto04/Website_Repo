@@ -7,5 +7,3 @@ if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
 }
 
 $username = isset($_SESSION['username']) ? $_SESSION['username'] : 'User'; // Fallback to 'User'
-
-?>
