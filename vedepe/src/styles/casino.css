@@ -1,0 +1,64 @@
+.casino-page .game-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin-top: 20px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.casino-page #blackjack-game,
+.casino-page #slot-machine {
+  background-color: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  color: white;
+  text-align: center;
+  width: 250px;
+  margin: 0 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.casino-page #player-hand,
+.casino-page #dealer-hand,
+.casino-page #slot-reels {
+  margin: 5px 0;
+}
+
+.casino-page button {
+  margin: 5px;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #be3233;
+  color: white;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+.casino-page button:hover {
+  background-color: #666666;
+}
+
+.casino-page #slot-reels {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.casino-page .reel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  font-size: 2em;
+  border: 2px solid #fff;
+  margin: 0 5px;
+  background-color: #333;
+  color: white;
+}
+
+.casino-page #slot-message {
+  margin-top: 10px;
+}

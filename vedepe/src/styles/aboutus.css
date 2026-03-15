@@ -1,0 +1,59 @@
+@import url("https://fonts.googleapis.com/css2?family=Allison&display=swap");
+
+.aboutus .memeorgy-title {
+  font-family: "Allison", cursive;
+  color: white;
+  font-size: 200px;
+  margin-bottom: 40px;
+  text-align: center;
+  transition: all 0.6s ease;
+  background: linear-gradient(135deg, #f06, #f79c42);
+  width: fit-content;
+  margin: 40px auto;
+  padding: 50px;
+  border-radius: 50%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  transform: rotate(-5deg);
+}
+
+.aboutus .memeorgy-title .meme {
+  color: white;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus .memeorgy-title .orgy {
+  color: #a02727;
+  text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.aboutus .memeorgy-title:hover {
+  font-size: 220px;
+  transform: rotate(0);
+  background: linear-gradient(135deg, #f79c42, #f06);
+}
+
+@media (max-width: 768px) {
+  .aboutus .memeorgy-title {
+    font-size: 100px;
+    padding: 30px;
+  }
+
+  .aboutus .memeorgy-title:hover {
+    font-size: 110px;
+    transform: rotate(0);
+    background: linear-gradient(135deg, #f79c42, #f06);
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutus .memeorgy-title {
+    font-size: 80px;
+    padding: 20px;
+  }
+
+  .aboutus .memeorgy-title:hover {
+    font-size: 90px;
+    transform: rotate(0);
+    background: linear-gradient(135deg, #f79c42, #f06);
+  }
+}

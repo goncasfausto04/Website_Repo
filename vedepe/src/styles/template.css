@@ -1,0 +1,336 @@
+body.app {
+  font-family: "Comic Sans MS", cursive, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  --color: rgba(114, 114, 114, 0.3);
+  background-color: #161616;
+  background-image:
+    linear-gradient(
+      0deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      var(--color) 25%,
+      var(--color) 26%,
+      transparent 27%,
+      transparent 74%,
+      var(--color) 75%,
+      var(--color) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
+}
+
+body.app .app-shell {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.app h1,
+body.app h2 {
+  color: #e0e0e0;
+}
+
+body.app header {
+  background-color: #1e1e1e;
+  padding: 10px 0;
+  margin: 0;
+}
+
+body.app nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+body.app nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+body.app nav ul.right {
+  margin-left: auto;
+  align-items: center;
+  gap: 8px;
+}
+
+body.app nav ul li {
+  margin: 0 15px;
+}
+
+body.app nav ul li.profile-item {
+  margin-left: 10px;
+}
+
+body.app nav a.profile-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #333;
+  border: 1px solid #444;
+}
+
+body.app nav a.profile-link:hover {
+  background-color: #be3233;
+}
+
+body.app nav a.profile-link i {
+  font-size: 14px;
+}
+
+body.app nav ul li a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+body.app nav ul li a:hover {
+  color: #be3233;
+}
+
+body.app nav ul li a.active {
+  color: rgb(199, 31, 31);
+  border-radius: 5px;
+}
+
+body.app table {
+  width: fit-content;
+  margin: 20px auto;
+  border-collapse: separate;
+  background-color: #242424;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.app .fumblemeter .table-wrapper {
+  max-width: 980px;
+  margin: 0 auto 20px;
+  padding: 0 16px;
+}
+
+body.app .fumblemeter table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+body.app .fumblemeter th,
+body.app .fumblemeter td {
+  text-align: left;
+}
+
+body.app .fumblemeter tbody tr:hover {
+  background-color: #383838;
+}
+
+body.app .fumblemeter td:last-child {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+body.app th {
+  background-color: #be3233;
+  color: white;
+  padding: 15px;
+}
+
+body.app td {
+  padding: 10px;
+  border: 1px solid #444;
+  color: #e0e0e0;
+}
+
+body.app tr:nth-child(even) {
+  background-color: #333;
+}
+
+body.app tr:hover {
+  background-color: #444;
+}
+
+body.app button,
+body.app #removebtn {
+  padding: 10px 20px;
+  font-size: 15px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+body.app button {
+  background-color: #666666;
+  color: white;
+}
+
+body.app button:hover {
+  background-color: #be3233;
+}
+
+body.app #removebtn {
+  background-color: #be3233;
+}
+
+body.app form {
+  margin-top: 20px;
+}
+
+body.app input[type="text"],
+body.app input[type="email"],
+body.app input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  width: 200px;
+  margin-right: 10px;
+  background-color: #333;
+  color: #e0e0e0;
+  border: 1px solid #444;
+}
+
+body.app footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  margin-top: auto;
+  width: 100%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+body.app .footer-content h3 {
+  margin: 0;
+  font-size: 24px;
+}
+
+body.app .footer-content p {
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+body.app .AddPersonForm {
+  padding: 15px;
+  border: 1px solid #444;
+  max-width: fit-content;
+  margin: 20px auto;
+  border-radius: 10px;
+  background-color: #1f1f1f;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+
+body.app .AddPersonForm:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+}
+
+body.app .form-error {
+  color: #ff4b4b;
+}
+
+body.app .form-message {
+  color: #4bd37b;
+}
+
+@media (max-width: 768px) {
+  body.app {
+    font-size: 16px;
+  }
+
+  body.app table {
+    width: 90%;
+    display: block;
+    overflow-x: auto;
+  }
+
+  body.app tr {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 1px solid #444;
+  }
+
+  body.app th,
+  body.app td {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+  }
+
+  body.app nav ul {
+    flex-direction: column;
+    text-align: left;
+  }
+
+  body.app nav ul li {
+    margin: 10px 0;
+  }
+
+  body.app button,
+  body.app #removebtn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+
+  body.app td,
+  body.app th {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  body.app .AddPersonForm {
+    width: 95%;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  body.app h1,
+  body.app h2 {
+    font-size: 18px;
+  }
+
+  body.app input[type="text"],
+  body.app input[type="email"],
+  body.app input[type="password"] {
+    width: 100%;
+  }
+
+  body.app button,
+  body.app #removebtn {
+    width: 100%;
+    margin: 5px 0;
+  }
+
+  body.app table,
+  body.app th,
+  body.app td {
+    font-size: 12px;
+    padding: 6px;
+  }
+}
