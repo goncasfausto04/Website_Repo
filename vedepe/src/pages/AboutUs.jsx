@@ -7,6 +7,7 @@ function AboutUs() {
       <h2>"Sopas de Chavalo Cansado" - Faustino, Goncalo, 2024</h2>
       <h2>"O blud bateu as botas!" - Bernardino, Renato, 2024</h2>
       <h2>"Variancias", Duarte, David, 2024</h2>
+      <h2>"A nao ser que sejas? six seven" - Faustino, Goncalo, 2026</h2>
       <h1 className="memeorgy-title">
         <span className="meme">Meme</span>
         <span className="orgy">Orgy</span>

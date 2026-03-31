@@ -1,11 +1,19 @@
-.minecraft-page #buttonsPlace {
+.minecraft-page main {
   width: 100%;
   min-height: calc(100vh - 120px);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  position: relative;
-  margin-top: 40px;
+  gap: 24px;
+  padding: 24px 16px;
+}
+
+.minecraft-page .minecraft-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
 
 .minecraft-page button {

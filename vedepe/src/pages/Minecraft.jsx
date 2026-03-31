@@ -6,21 +6,17 @@ function Minecraft() {
 
   return (
     <div className="minecraft-page">
-      <h1>Minecraft</h1>
-      <div id="buttonsPlace">
-        <div id="buttons">
+      <main>
+        <h1>Minecraft</h1>
+        <div className="minecraft-actions">
           <button type="button" onClick={() => navigate("/minecraft/cords")}>
             Cords
           </button>
-          <button
-            type="button"
-            onClick={() => navigate("/workinprogress")}
-            style={{ marginLeft: "20px" }}
-          >
+          <button type="button" onClick={() => navigate("/workinprogress")}>
             Tasks
           </button>
         </div>
-      </div>
+      </main>
     </div>
   );
 }
